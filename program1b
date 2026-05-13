@@ -1,0 +1,43 @@
+let cities = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"];
+
+console.log("Total number of cities:", cities.length);
+
+cities.push("San Francisco");
+console.log("Cities after adding a new city:", cities);
+
+cities.shift();
+console.log("Cities after removing the first city:", cities);
+
+const specificCity = "Chicago";
+
+const index = cities.indexOf(specificCity);
+
+if (index !== -1) {
+ console.log("The index of " + specificCity + " is:", index);
+} else {
+ console.log(specificCity + " is not found in the array.");
+}
+
+output:
+Total number of cities: 5
+
+Cities after adding a new city:
+[
+ 'New York',
+ 'Los Angeles',
+ 'Chicago',
+ 'Houston',
+ 'Phoenix',
+ 'San Francisco'
+]
+
+Cities after removing the first city:
+[
+ 'Los Angeles',
+ 'Chicago',
+ 'Houston',
+ 'Phoenix',
+ 'San Francisco'
+]
+
+The index of Chicago is: 1

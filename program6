@@ -1,0 +1,56 @@
+import React, { useState, useEffect } from 'react';
+
+const Counter = () => {
+
+ const [count, setCount] = useState(0);
+
+ useEffect(() => {
+  const fetchData = async () => {
+
+   const initialCount =
+    await new Promise(resolve =>
+     setTimeout(() => resolve(0), 1000));
+
+   setCount(initialCount);
+  };
+
+  fetchData();
+ }, []);
+
+ const doubleCount = () => {
+  setCount(count * 2);
+ };
+
+ return (
+  <div>
+   <h1>Counter: {count}</h1>
+
+   <button onClick={() => setCount(count + 1)}>
+    Increment
+   </button>
+
+   <button onClick={() => setCount(count - 1)}>
+    Decrement
+   </button>
+
+   <button onClick={doubleCount}>
+    Double
+   </button>
+
+   <button onClick={() => setCount(0)}>
+    Reset
+   </button>
+  </div>
+ );
+};
+
+export default Counter;
+
+
+output:
+Counter: 0
+
+[Increment]
+[Decrement]
+[Double]
+[Reset]

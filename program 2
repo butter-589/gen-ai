@@ -1,0 +1,39 @@
+function isPalindrome(str) {
+ const cleanedStr = str.replace(/[\W_]/g, '').toLowerCase();
+ const reversedStr = cleanedStr.split('').reverse().join('');
+ return cleanedStr === reversedStr;
+}
+
+const userInput = prompt("Please enter a string:");
+
+const length = userInput.length;
+console.log("Length of the string:", length);
+
+const startIndex = userInput.indexOf("JavaScript");
+
+const extractedWord =
+ startIndex !== -1
+  ? userInput.substring(startIndex, startIndex + "JavaScript".length)
+  : "Not found";
+
+console.log("Extracted word:", extractedWord);
+
+const wordToReplace = "word";
+const newWord = "phrase";
+
+const newString =
+ userInput.replace(new RegExp(wordToReplace, 'g'), newWord);
+
+console.log("New string after replacement:", newString);
+
+const palindromeCheck = isPalindrome(userInput);
+
+console.log(`Is the string a palindrome? ${palindromeCheck ? "Yes" : "No"}`);
+
+output:
+Please enter a string: FULLSTACK
+
+Length of the string: 9
+Extracted word: Not found
+New string after replacement: FULLSTACK
+Is the string a palindrome? No

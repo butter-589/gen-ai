@@ -1,0 +1,15 @@
+console.log("Hello, World!");
+
+function calculateSum(num1, num2) {
+ const sum = num1 + num2;
+ alert("The sum of " + num1 + " and " + num2 + " is: " + sum);
+}
+
+const number1 = 5;
+const number2 = 10;
+
+calculateSum(number1, number2);
+
+output:
+Hello, World!
+The sum of 5 and 10 is: 15
